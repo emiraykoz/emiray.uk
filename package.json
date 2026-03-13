@@ -1,0 +1,30 @@
+{
+  "name": "emiray.uk",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && wrangler pages deploy ./dist --project-name=emiraydotuk --branch=main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emiraykoz/emiray.uk.git"
+  },
+  "author": "Emiray Koz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emiraykoz/emiray.uk/issues"
+  },
+  "homepage": "https://github.com/emiraykoz/emiray.uk#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "@tailwindcss/vite": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}
