@@ -33,7 +33,7 @@ function draw() {
 
   const count = dataArray.length;
   const gap = 6;
-  const barWidth = (canvas.width - (count - 1) * gap) / count;
+  const barWidth = ((canvas.width - (count - 1) * gap) / count) * 1.25;
 
   dataArray.forEach((value, i) => {
     const h = (value / 255) * canvas.height;

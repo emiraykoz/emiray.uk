@@ -2,7 +2,7 @@
 
 :root {
   --border-radius: 12px;
-  --background-color: rgb(12, 12, 12);
+  --background-color: rgb(16, 16, 16);
 }
 
 @font-face {
@@ -43,7 +43,6 @@ body {
 
 .main {
   @apply transition-all;
-  @apply duration-300;
   @apply ease-out;
   @apply transform-gpu;
   @apply will-change-transform;
@@ -52,9 +51,9 @@ body {
 
 .card {
   @apply bg-white/5;
-  @apply border;
   @apply border-white/5;
   @apply rounded-(--border-radius);
+  @apply shadow-xl;
   @apply flex;
   @apply flex-col;
   @apply flex-1;
