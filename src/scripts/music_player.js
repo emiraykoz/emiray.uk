@@ -57,12 +57,12 @@ document.getElementById("play").addEventListener("click", () => {
     document.getElementById("play-icon").classList.add("hidden");
     document.getElementById("pause-icon").classList.remove("hidden");
     document.getElementById("image-background").classList.remove("opacity-0");
-    document.getElementById("image-background").classList.add("opacity-10");
+    document.getElementById("image-background").classList.add("opacity-5");
   } else {
     audio.pause();
     document.getElementById("play-icon").classList.remove("hidden");
     document.getElementById("pause-icon").classList.add("hidden");
-    document.getElementById("image-background").classList.remove("opacity-10");
+    document.getElementById("image-background").classList.remove("opacity-5");
     document.getElementById("image-background").classList.add("opacity-0");
   }
 });

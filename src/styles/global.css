@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --border-radius: 12px;
-  --background-color: rgb(16, 16, 16);
+  --border-radius: 4px;
+  --background-color: rgb(15, 15, 17);
 }
 
 @font-face {
@@ -51,9 +51,7 @@ body {
 
 .card {
   @apply bg-white/5;
-  @apply border-white/5;
   @apply rounded-(--border-radius);
-  @apply shadow-xl;
   @apply flex;
   @apply flex-col;
   @apply flex-1;
