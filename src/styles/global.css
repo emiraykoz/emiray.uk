@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --border-radius: 4px;
-  --background-color: rgb(15, 15, 17);
+  --border-radius: 8px;
 }
 
 @font-face {
@@ -25,38 +24,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor:
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>')
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>')
       2 2,
     auto !important;
 }
 
 html,
 body {
-  @apply bg-(--background-color);
-  @apply flex;
-  @apply flex-col;
-  @apply min-h-screen;
-  @apply min-w-0;
-  @apply items-center;
-  @apply justify-center;
+  @apply w-screen bg-linear-to-t from-black/10 to-white flex flex-col min-h-screen min-w-0 items-center justify-center;
 }
 
 .main {
-  @apply transition-all;
-  @apply ease-out;
-  @apply transform-gpu;
-  @apply will-change-transform;
-  @apply z-50;
+  @apply scale-105 z-50;
 }
 
 .card {
-  @apply bg-white/5;
-  @apply rounded-(--border-radius);
-  @apply flex;
-  @apply flex-col;
-  @apply flex-1;
-  @apply p-8;
-  @apply backdrop-blur-xl;
-  @apply transform-gpu;
-  @apply will-change-transform;
+  @apply bg-black/5 border border-dashed border-black/35 rounded-(--border-radius) flex flex-col flex-1 p-8;
 }

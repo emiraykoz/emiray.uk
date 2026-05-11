@@ -1,3 +1,4 @@
+/*
 const rotElements = document.querySelectorAll(".main");
 rotElements.forEach((el) => {
   document.addEventListener("mousemove", (event) => {
@@ -14,3 +15,4 @@ rotElements.forEach((el) => {
     el.style.transform = `perspective(500px) rotateX(${xRotate}deg) rotateY(${yRotate}deg)`;
   });
 });
+*/

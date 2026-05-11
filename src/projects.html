@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="/fonts/SpaceGrotesk.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="/assets/icon.webp" as="image" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="icon" href="/assets/icon.ico" type="image/x-icon" />
+    <title>Emiray Koz</title>
+  </head>
+  <body id="body">
+    <!--
+    <div
+      id="image-background"
+      class="fixed inset-0 bg-[url(/assets/song.webp)] bg-cover bg-bottom opacity-0 transition-opacity duration-300 blur-lg -m-6"
+    ></div>
+    -->
+    <div class="main shadow-xl">
+      <div class="card md:w-170 relative">
+        <div class="flex items-start gap-1 -mt-20">
+          <div
+            class="w-28 h-28 mr-2 rounded-(--border-radius) border border-dashed border-black/35"
+          >
+            <img
+              src="/assets/icon.webp"
+              class="w-full h-full rounded-(--border-radius)"
+            />
+          </div>
+          <a
+            href="/"
+            class="h-12 w-22 rounded-t-(--border-radius) flex items-center justify-center text-black transition-colors hover:from-black/5 hover:to-black/15"
+          >
+            Home
+          </a>
+          <a
+            href="/projects"
+            class="h-12 w-22 rounded-t-(--border-radius) bg-black/5 border border-dashed border-b-0 border-black/35 bg-linear-to-t flex items-center justify-center text-black"
+          >
+            Projects
+          </a>
+        </div>
+        <h1 class="font-semibold mt-6 text-2xl flex items-center text-black">
+          Emiray Koz <span class="text-black/50 ml-1.5">/projects</span>
+        </h1>
+        <div class="mt-6 grid md:grid-cols-2 gap-4">
+          <a
+            href="https://github.com/Virtnox"
+            class="transition-colors space-y-2 border border-dashed border-black/50 hover:bg-black/5 hover:border-black rounded-(--border-radius) p-8 flex flex-col"
+          >
+            <img src="/assets/virtnox.webp" class="size-12" />
+            <h3 class="font-medium text-xl">Virtnox</h3>
+            <p class="text-black/75">
+              Virtnox is a modern hosting provider delivering reliable, flexible
+              infrastructure that puts you in full control.
+            </p>
+          </a>
+          <a
+            href=""
+            class="transition-colors space-y-2 border border-dashed border-black/50 hover:bg-black/5 hover:border-black rounded-(--border-radius) p-8 flex flex-col"
+          >
+            <img src="/assets/lucide-question.png" class="size-12 opacity-35" />
+            <h3 class="font-medium text-xl">Virtalk</h3>
+            <p class="text-black/75">
+              Virtalk is an assistive keyboard with predictive text and speech
+              output that helps people communicate more easily.
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

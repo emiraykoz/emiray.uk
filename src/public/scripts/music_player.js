@@ -32,17 +32,17 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   const count = dataArray.length;
-  const gap = 6;
-  const barWidth = ((canvas.width - (count - 1) * gap) / count) * 1.25;
+  const gap = 4;
+  const barWidth = ((canvas.width - (count - 1) * gap) / count) * 1;
 
   dataArray.forEach((value, i) => {
-    const h = (value / 255) * canvas.height;
+    const h = (value / 1920) * canvas.height;
     if (h < 1) return;
 
     const x = i * (barWidth + gap);
     const y = canvas.height - h;
 
-    ctx.fillStyle = "rgba(255,255,255,0.05)";
+    ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
     ctx.beginPath();
     ctx.roundRect(x, y, barWidth, h, radius);
     ctx.fill();
@@ -56,13 +56,13 @@ document.getElementById("play").addEventListener("click", () => {
     audio.play();
     document.getElementById("play-icon").classList.add("hidden");
     document.getElementById("pause-icon").classList.remove("hidden");
-    document.getElementById("image-background").classList.remove("opacity-0");
-    document.getElementById("image-background").classList.add("opacity-5");
+    // document.getElementById("image-background").classList.remove("opacity-0");
+    // document.getElementById("image-background").classList.add("opacity-5");
   } else {
     audio.pause();
     document.getElementById("play-icon").classList.remove("hidden");
     document.getElementById("pause-icon").classList.add("hidden");
-    document.getElementById("image-background").classList.remove("opacity-5");
-    document.getElementById("image-background").classList.add("opacity-0");
+    // document.getElementById("image-background").classList.remove("opacity-5");
+    // document.getElementById("image-background").classList.add("opacity-0");
   }
 });
