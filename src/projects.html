@@ -25,9 +25,7 @@
     <div class="main shadow-xl">
       <div class="card md:w-170 relative">
         <div class="flex items-start gap-1 -mt-20">
-          <div
-            class="w-28 h-28 mr-2 rounded-(--border-radius) border border-dashed border-black/35"
-          >
+          <div class="w-28 h-28 mr-2 rounded-(--border-radius) shadow-2xl">
             <img
               src="/assets/icon.webp"
               class="w-full h-full rounded-(--border-radius)"
@@ -41,7 +39,7 @@
           </a>
           <a
             href="/projects"
-            class="h-12 w-22 rounded-t-(--border-radius) bg-black/5 border border-dashed border-b-0 border-black/35 bg-linear-to-t flex items-center justify-center text-black"
+            class="h-12 w-22 rounded-t-(--border-radius) bg-linear-to-t from-black/5 to-black/15 flex items-center justify-center text-black"
           >
             Projects
           </a>
@@ -52,28 +50,51 @@
         <div class="mt-6 grid md:grid-cols-2 gap-4">
           <a
             href="https://github.com/Virtnox"
-            class="transition-colors space-y-2 border border-dashed border-black/50 hover:bg-black/5 hover:border-black rounded-(--border-radius) p-8 flex flex-col"
+            class="relative group overflow-clip transition-colors space-y-2 bg-black/5 hover:bg-black/10 rounded-(--border-radius) p-8 flex flex-col"
           >
-            <img src="/assets/virtnox.webp" class="size-12" />
-            <h3 class="font-medium text-xl">Virtnox</h3>
-            <p class="text-black/75">
-              Virtnox is a modern hosting provider delivering reliable, flexible
-              infrastructure that puts you in full control.
-            </p>
+            <div
+              class="absolute transition-all duration-250 inset-0 opacity-50 group-hover:opacity-85 blur group-hover:blur-[1.5px] bg-[url(/assets/virtnox-preview.webp)] bg-size-[110%_auto] h-full w-full bg-center bg-no-repeat group-hover:translate-y-0"
+            ></div>
+            <div class="z-50">
+              <img
+                src="/assets/virtnox.webp"
+                class="size-12 transition-all group-hover:invert"
+              />
+              <h3
+                class="font-medium text-xl transition-colors text-black group-hover:text-white"
+              >
+                Virtnox
+              </h3>
+              <p
+                class="transition-colors text-black/75 group-hover:text-white/75"
+              >
+                Virtnox is a modern hosting provider delivering reliable,
+                flexible infrastructure that puts you in full control.
+              </p>
+            </div>
           </a>
           <a
-            href=""
-            class="transition-colors space-y-2 border border-dashed border-black/50 hover:bg-black/5 hover:border-black rounded-(--border-radius) p-8 flex flex-col"
+            class="transition-colors space-y-2 bg-black/5 hover:bg-black/10 rounded-(--border-radius) p-8 flex flex-col"
           >
-            <img src="/assets/lucide-question.png" class="size-12 opacity-35" />
-            <h3 class="font-medium text-xl">Virtalk</h3>
-            <p class="text-black/75">
-              Virtalk is an assistive keyboard with predictive text and speech
-              output that helps people communicate more easily.
-            </p>
+            <div class="opacity-50">
+              <img src="/assets/lucide-question.png" class="size-12" />
+              <h3 class="font-medium text-xl">Virtalk</h3>
+              <p class="text-black/75">
+                Virtalk is an assistive keyboard with predictive text and speech
+                output that helps people communicate more easily.
+              </p>
+            </div>
           </a>
         </div>
       </div>
     </div>
+    <div id="cursor"></div>
+    <script>
+      const cursor = document.getElementById("cursor");
+      window.addEventListener("mousemove", (e) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+      });
+    </script>
   </body>
 </html>

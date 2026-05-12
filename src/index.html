@@ -19,9 +19,7 @@
     <div class="main shadow-xl">
       <div class="card md:w-170 relative rounded-b-none!">
         <div class="flex items-start gap-1 -mt-20">
-          <div
-            class="w-28 h-28 mr-2 rounded-(--border-radius) border border-dashed border-black/35"
-          >
+          <div class="w-28 h-28 mr-2 rounded-(--border-radius) shadow-2xl">
             <img
               src="/assets/icon.webp"
               class="w-full h-full rounded-(--border-radius)"
@@ -29,7 +27,7 @@
           </div>
           <a
             href="/"
-            class="h-12 w-22 rounded-t-(--border-radius) bg-black/5 border border-dashed border-b-0 border-black/35 bg-linear-to-t flex items-center justify-center text-black"
+            class="h-12 w-22 rounded-t-(--border-radius) bg-linear-to-t from-black/5 to-black/15 flex items-center justify-center text-black"
           >
             Home
           </a>
@@ -110,7 +108,7 @@
       >
         <img
           src="/assets/song.webp"
-          class="w-14 aspect-square rounded-(--border-radius) border border-dashed border-black/35"
+          class="w-14 aspect-square rounded-(--border-radius)"
         />
         <p
           class="text-black font-medium flex items-center min-w-0 overflow-hidden w-full"
@@ -195,6 +193,14 @@
       id="bars"
       class="absolute inset-0 w-screen h-screen pointer-events-none"
     ></canvas>
+    <div id="cursor"></div>
+    <script>
+      const cursor = document.getElementById("cursor");
+      window.addEventListener("mousemove", (e) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+      });
+    </script>
     <script src="/scripts/music_player.js"></script>
   </body>
 </html>

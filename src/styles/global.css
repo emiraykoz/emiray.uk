@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --border-radius: 8px;
+  --border-radius: 6px;
 }
 
 @font-face {
@@ -18,15 +18,22 @@
 }
 
 * {
-  @apply font-sans;
-  letter-spacing: -0.015em;
+  @apply font-sans tracking-tight;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor:
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>')
-      2 2,
-    auto !important;
+}
+
+* {
+  @apply cursor-none!;
+}
+
+#cursor {
+  @apply fixed left-0 top-0 w-5 h-5 pointer-events-none z-9999999 bg-white mix-blend-difference -translate-0.5;
+  -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>')
+    center/contain no-repeat;
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>')
+    center/contain no-repeat;
 }
 
 html,
@@ -39,5 +46,5 @@ body {
 }
 
 .card {
-  @apply bg-black/5 border border-dashed border-black/35 rounded-(--border-radius) flex flex-col flex-1 p-8;
+  @apply bg-black/5 rounded-(--border-radius) flex flex-col flex-1 p-8;
 }
