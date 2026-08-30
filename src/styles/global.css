@@ -4,16 +4,9 @@
   --border-radius: 6px;
 }
 
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("/fonts/SpaceGrotesk.woff2") format("woff2");
-  font-weight: 100 900;
-  font-display: swap;
-}
-
 @theme {
   --font-sans:
-    "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
